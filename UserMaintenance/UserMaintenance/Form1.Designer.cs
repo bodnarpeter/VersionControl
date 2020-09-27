@@ -47,14 +47,14 @@
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(301, 49);
+            this.textBox1.Location = new System.Drawing.Point(354, 49);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(166, 26);
             this.textBox1.TabIndex = 1;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(301, 95);
+            this.textBox2.Location = new System.Drawing.Point(354, 92);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(166, 26);
             this.textBox2.TabIndex = 2;
@@ -83,8 +83,9 @@
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(240, 38);
             this.button1.TabIndex = 5;
-            this.button1.Text = "button1";
+            this.button1.Text = "Hozzáadás";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Form1
             // 
