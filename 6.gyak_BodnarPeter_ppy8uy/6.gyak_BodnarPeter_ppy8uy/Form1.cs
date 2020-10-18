@@ -1,4 +1,5 @@
-﻿using _6.gyak_BodnarPeter_ppy8uy.MnbServiceReference;
+﻿using _6.gyak_BodnarPeter_ppy8uy.Entities;
+using _6.gyak_BodnarPeter_ppy8uy.MnbServiceReference;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,6 +14,7 @@ namespace _6.gyak_BodnarPeter_ppy8uy
 {
     public partial class Form1 : Form
     {
+        BindingList<RateData> rates = new BindingList<RateData>();
         public Form1()
         {
             InitializeComponent();
