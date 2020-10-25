@@ -86,5 +86,6 @@ namespace _7.gyak_BodnarPeter_ppy8uy
 
             return DeathProbabilities;
         }
+        Random rng = new Random(1234);
     }
 }
