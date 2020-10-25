@@ -46,5 +46,45 @@ namespace _7.gyak_BodnarPeter_ppy8uy
 
             return population;
         }
+        public List<BirthProbability> GetBirthProbabilities(string csvpath)
+        {
+            List<BirthProbability> BirthProbabilities = new List<BirthProbability>();
+
+            using (StreamReader sr = new StreamReader(csvpath, Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    BirthProbabilities.Add(new BirthProbability()
+                    {
+                        Age = int.Parse(line[0]),                      
+                        NbrOfChildren = int.Parse(line[1]),
+                        BProbability = double.Parse(line[2])
+                    });
+                }
+            }
+
+            return BirthProbabilities;
+        }
+        public List<DeathProbability> GetDeathProbabilities(string csvpath)
+        {
+            List<DeathProbability> DeathProbabilities = new List<DeathProbability>();
+
+            using (StreamReader sr = new StreamReader(csvpath, Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    var line = sr.ReadLine().Split(';');
+                    DeathProbabilities.Add(new DeathProbability()
+                    {
+                        Gender=(Gender)Enum.Parse(typeof(Gender), line[0]),
+                        Age = int.Parse(line[1]),
+                        DProbability = double.Parse(line[2])
+                    });
+                }
+            }
+
+            return DeathProbabilities;
+        }
     }
 }
