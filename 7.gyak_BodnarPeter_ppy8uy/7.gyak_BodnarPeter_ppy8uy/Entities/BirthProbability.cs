@@ -6,10 +6,10 @@ using System.Threading.Tasks;
 
 namespace _7.gyak_BodnarPeter_ppy8uy.Entities
 {
-    public enum Gender
+    public class BirthProbability
     {
-        Male=1,
-        Female=2
+        public int BirthYear { get; set; }
+        public int NbrOfChildren { get; set; }
+        public double BProbability { get; set; }
     }
-    
- }
+}
