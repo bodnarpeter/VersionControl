@@ -32,6 +32,7 @@ namespace BodnarPeter_ppy8uy_10gyak
             }
             gc.Start();
         }
+        Brain winnerBrain = null;
         private void Gc_GameOver(object sender)
         {
             generation++;
@@ -57,7 +58,15 @@ namespace BodnarPeter_ppy8uy_10gyak
                     gc.AddPlayer(b.Mutate());
             }
             gc.Start();
-
+            var winners = from p in topPerformers
+                          where p.IsWinner
+                          select p;
+            if (winners.Count() > 0)
+            {
+                winnerBrain = winners.FirstOrDefault().Brain.Clone();
+                gc.GameOver -= Gc_GameOver;
+                return;
+            }
         }
     }
 }
