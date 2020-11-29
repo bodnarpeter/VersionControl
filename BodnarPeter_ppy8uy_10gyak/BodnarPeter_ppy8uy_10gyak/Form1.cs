@@ -20,6 +20,7 @@ namespace BodnarPeter_ppy8uy_10gyak
             InitializeComponent();
             ga = gc.ActivateDisplay();
             this.Controls.Add(ga);
+          
         }
     }
 }
